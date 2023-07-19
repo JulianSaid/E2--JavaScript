@@ -48,20 +48,40 @@ const pizzas = [
   },
 ];
 
-
+//EJERCICIO 1
 const pizzasImpares = pizzas.filter(pizza => {
   return pizza.id % 2 === 1
 }
 )
 
 pizzasImpares.forEach((pizza) => {
-  console.log(`La ${pizza.nombre} es impar`);
+  const { nombre } = pizza;
+  console.log(`La ${nombre} es impar`);
 })
 
 console.log("-------------------------------------");
 
-const pizzaMasBarata = ((precio) => {
-  return pizzas.some(pizzas.precio < precio)
-});
+//EJERCICIO 2 
+const pizzaMasBarata = (precio) => {
+  return pizzas.some((pizza) => {
+    return pizza.precio < precio
+  })
+    ? console.log(`Hay productos con un precio menor a ${precio}`)
+    : console.log(`No hay productos con un precio menor a ${precio}`)
+};
 
-console.log(pizzaMasBarata(800));
+pizzaMasBarata(2500);
+
+console.log("-------------------------------------");
+
+
+//EJERCICIO 3
+
+const todasLasPizzas = (pizza) => {
+  for( let key of pizza) {
+    console.log(key);
+  }
+}
+
+
+console.log(todasLasPizzas);
