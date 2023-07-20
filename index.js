@@ -86,4 +86,10 @@ console.log("-------------------------------------");
 
 //EJERCICIO 4
 
-function ingredientesPizzas
+
+const nombreIngrediente = pizzas.forEach(function (pizza) {
+  console.log("-----------------");
+  console.log(pizza.nombre)
+  console.log(pizza.ingredientes)
+})
+
