@@ -66,8 +66,8 @@ const pizzaMasBarata = (precio) => {
   return pizzas.some((pizza) => {
     return pizza.precio < precio
   })
-    ? console.log(`Hay productos con un precio menor a ${precio}`)
-    : console.log(`No hay productos con un precio menor a ${precio}`)
+    ? console.log(`Hay pizzas con un precio menor a ${precio}`)
+    : console.log(`No hay pizzas con un precio menor a ${precio}`)
 };
 
 pizzaMasBarata(2500);
@@ -77,11 +77,13 @@ console.log("-------------------------------------");
 
 //EJERCICIO 3
 
-const todasLasPizzas = (pizza) => {
-  for( let key of pizza) {
-    console.log(key);
-  }
-}
+const valorPizzas = pizzas.forEach(pizza => {
+  console.log(`La ${pizza.nombre} tiene un valor de ${pizza.precio}`);
+});
+
+console.log("-------------------------------------");
 
 
-console.log(todasLasPizzas);
+//EJERCICIO 4
+
+function ingredientesPizzas
