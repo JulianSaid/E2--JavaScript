@@ -88,8 +88,7 @@ console.log("-------------------------------------");
 
 
 const nombreIngrediente = pizzas.forEach(function (pizza) {
-  console.log("-----------------");
-  console.log(pizza.nombre)
-  console.log(pizza.ingredientes)
+  console.log(`Los ingredientes de la ${pizza.nombre} son:`)
+ pizza.ingredientes.forEach(ingrediente => console.log(ingrediente))
 })
 
